@@ -24,7 +24,7 @@ function Integrations({ members }: Props) {
 
   for (let i = 0; i < numSets; i++) {
     sets.push(
-      <div className="row">
+      <div className="row" key={i}>
         {integrations.map((item, index) => {
           return (
             <Pill key={index} name={item.name} text={item.text} 
@@ -45,7 +45,7 @@ function Integrations({ members }: Props) {
 
   for (let i = 0; i < numRows; i++) {
     rows.push(
-      <div className="marquee-inner" style={{top: `${i*52}px`}}>
+      <div key={i} className="marquee-inner" style={{top: `${i*52}px`}}>
         {sets}
       </div>
     );
