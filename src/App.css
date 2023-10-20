@@ -1,0 +1,10 @@
+.App {
+  display: flex;
+  height: 100vh;
+  background: var(--body-bg, #f8f8f8);
+}
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
