@@ -12,6 +12,8 @@ I gave each row independent hover, making it fun to interact with them. Each "pi
 On click, a modal loads which I closely matched to the Figma comp as well. I decided against an animation as I think the default UX is better with snappier on/off movement.
 
 Areas for improvement would be tabbing functionality, as well as the ability to close the modal by clicking anywhere on the screen. I'd also like to use the "Escape" key to close but that is possibly an inconsistent practice.
+I added a blur effect behind the modal as a style choice, but there could be some framerate concerns with this sitting atop the animation. I would recommend doing some performance testing to find out. Additionally the animation might be optimized with translation instead of animating 'left' property.
+Code wise, there are lots of ways to improve things for maintainability, like separating icon and component styles as well as moving some of the state/controller logic to separate files. 
 One note about the Integration icons: I used the same SVGs for both, but noticed the `viewBox`es are actually different between the main and modal implementations within Figma. This creates a visual disparity within their container, so to counteract this I leveraged a slight CSS scale transform.
 
 Below are instructions for running the project. Please let me know if you have any trouble running this and I will work to troubleshoot with you straightaway!
