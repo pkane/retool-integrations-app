@@ -1,11 +1,11 @@
 
-interface ListItemInterface {
+export interface ListItemInterface {
   name: string;
   text: string;
   details: object;
 }
 
-const IntegrationsList: ListItemInterface[] = [
+export const IntegrationsList: ListItemInterface[] = [
   {
     name: "big-query",
     text: "BigQuery",
@@ -117,5 +117,3 @@ const IntegrationsList: ListItemInterface[] = [
     }
   }
 ];
-
-export default IntegrationsList;

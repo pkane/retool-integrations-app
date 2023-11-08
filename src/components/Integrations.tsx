@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Wrapper } from "./Atoms";
 import Pill from "./Pill";
 import Modal from "./Modal";
+import { ListItemInterface } from "../data/IntegrationsList";
 
 interface Props {
   members: Array<any>;
@@ -10,7 +11,7 @@ interface Props {
 function Integrations({ members }: Props) {
   const [integrations, setIntegrations] = useState(members);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [activeModalDialog, setActiveModalDialog] = useState({});
+  const [activeModalDialog, setActiveModalDialog] = useState<ListItemInterface | null>(null);
 
   const numRows = 5;
   const numSets = 2;
@@ -19,7 +20,7 @@ function Integrations({ members }: Props) {
 
   const onModalCloseRequest = (): void => {
     setIsModalOpen(false);
-    setActiveModalDialog({});
+    setActiveModalDialog(null);
   };  
 
   for (let i = 0; i < numSets; i++) {
@@ -31,7 +32,7 @@ function Integrations({ members }: Props) {
                 onClick={
                   (e:any) => {
                     const target = e.target.closest('div');
-                    const activeItem = integrations.find(item => item.name === target.attributes['data-name'].value);
+                    const activeItem = item;
                     setIsModalOpen(true); 
                     setActiveModalDialog(activeItem); 
                   }

@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import Integrations from "./components/Integrations";
-import IntegrationsList from "./data/IntegrationsList";
+import { IntegrationsList } from "./data/IntegrationsList";
 
 function App() {
   return (
