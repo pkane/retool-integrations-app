@@ -1,7 +1,5 @@
 # Integrations Infinite Scroller!
 
-This private repo is for the solution for the Design Engineer, Web Presence Takehome Exercise.
-
 ## Approach
 
 For this infinite scroller, I opted to go with a Create React App starter template as it's a comfortable starting point and easy to get up and running. 
