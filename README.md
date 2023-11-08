@@ -1,5 +1,8 @@
 # Integrations Infinite Scroller!
 
+![image](https://github.com/pkane/retool-integrations-app/assets/1375526/f03ceaaf-af59-4ff1-86b5-367f60c4c5d3)
+
+
 ## Approach
 
 For this infinite scroller, I opted to go with a Create React App starter template as it's a comfortable starting point and easy to get up and running. 
