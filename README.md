@@ -1,3 +1,21 @@
+# Integrations Infinite Scroller!
+
+## Approach
+
+For this infinite scroller, I opted to go with a Create React App starter template as it's a comfortable starting point and easy to get up and running. 
+I chose to use React's Styled Components as they are easily integrated into any component and easily make edits as well as leverage consistent SCSS conventions.
+For the main Integrations layout, I leveraged a technique I've used previously for the "infinite" scrolling effect. This technique requires a specific width for each parent container but features two identical child rows that repeat inline, creating the effect.
+I thought it would be visually unique if alternating rows had different speeds, and staggered them by using a negative `animation-duration` value.
+I gave each row an independent hover, making it fun to interact with them. Each "pill" animates slightly as well as the shadow under darkens, simulating a real hover.
+On click, a modal loads which I closely matched to the Figma comp as well. I decided against animation as I think the default UX is better with snappier on/off movement.
+
+Areas for improvement would be tabbing functionality, as well as the ability to close the modal by clicking anywhere on the screen. I'd also like to use the "Escape" key to close but that is possibly an inconsistent practice.
+I added a blur effect behind the modal as a style choice, but there could be some framerate concerns with this sitting atop the animation. I would recommend doing some performance testing to find out. Additionally, the animation might be optimized with translation instead of animating the 'left' property.
+Code-wise, there are lots of ways to improve things for maintainability, like separating icon and component styles as well as moving some of the state/controller logic to separate files. 
+One note about the Integration icons: I used the same SVGs for both, but noticed the `viewBox`es are actually different between the main and modal implementations within Figma. This creates a visual disparity within their container, so to counteract this I leveraged a slight CSS scale transform.
+
+Below are instructions for running the project. 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
